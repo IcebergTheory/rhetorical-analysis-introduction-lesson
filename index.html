@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AP Lang: Rhetorical Analysis Intro Masterclass</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans leading-relaxed pb-16">
+
+    <!-- Header / Navigation -->
+    <header class="bg-indigo-900 text-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-5xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div>
+                <span class="text-xs uppercase tracking-widest text-indigo-300 font-semibold">AP Language & Composition</span>
+                <h1 class="text-xl font-bold">Rhetorical Analysis Intro Workshop</h1>
+            </div>
+            <span class="bg-indigo-800 text-indigo-200 text-xs px-3 py-1 rounded-full font-mono">Focus Text: Ben Adler (2016)</span>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="max-w-5xl mx-auto px-4 mt-8 space-y-8">
+
+        <!-- Physical Notebook Notice -->
+        <div class="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-lg shadow-sm flex items-start gap-3">
+            <div class="text-2xl">✏️</div>
+            <div>
+                <h3 class="font-bold text-amber-900 text-sm">Classroom Expectation: Handwritten Work Only</h3>
+                <p class="text-xs text-amber-800 mt-0.5">
+                    Use your iPad to navigate this site and review the text. All notes, SOAPSTone outlines, strategy breakdowns, and introduction drafts <strong>must be written by hand in your physical English notebook</strong>.
+                </p>
+            </div>
+        </div>
+
+        <!-- Objectives & Targets -->
+        <section class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+            <h2 class="text-lg font-bold text-indigo-900 mb-2 flex items-center gap-2">
+                🎯 Learning Targets
+            </h2>
+            <ul class="list-disc list-inside space-y-1 text-slate-700 text-sm">
+                <li>I can analyze the contextual elements (SOAPSTone) of Ben Adler's article on plastic bag bans.</li>
+                <li>I can identify specific rhetorical choices in Adler's essay and explain their audience effect.</li>
+                <li>I can draft a 3–4 sentence rhetorical analysis introduction by hand, containing a strong, defensible thesis statement.</li>
+            </ul>
+        </section>
+
+        <!-- Step 1: SOAPSTone Explorer -->
+        <section class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+            <div class="mb-4">
+                <span class="text-xs font-bold uppercase text-indigo-600 tracking-wider">Step 1 • Context Building (Notebook Task)</span>
+                <h2 class="text-xl font-bold text-slate-900">SOAPSTone Context Guide</h2>
+                <p class="text-sm text-slate-600">Write down <strong>S-O-A-P-S-T-O-N-E</strong> vertically in your notebook. Tap each tile below to reveal key details for Ben Adler's essay and copy them into your notes.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <!-- Speaker -->
+                <div onclick="toggleCard('speaker')" class="cursor-pointer border border-slate-200 p-4 rounded-lg hover:border-indigo-500 transition">
+                    <h3 class="font-bold text-indigo-900 flex justify-between items-center">
+                        Speaker <span class="text-xs font-normal text-indigo-500">Tap to reveal</span>
+                    </h3>
+                    <p id="speaker" class="text-sm text-slate-600 mt-2 hidden"><strong>Ben Adler:</strong> Environmental journalist writing for <em>Grist</em> and the Climate Desk collaboration.</p>
+                </div>
+                <!-- Occasion -->
+                <div onclick="toggleCard('occasion')" class="cursor-pointer border border-slate-200 p-4 rounded-lg hover:border-indigo-500 transition">
+                    <h3 class="font-bold text-indigo-900 flex justify-between items-center">
+                        Occasion <span class="text-xs font-normal text-indigo-500">Tap to reveal</span>
+                    </h3>
+                    <p id="occasion" class="text-sm text-slate-600 mt-2 hidden"><strong>June 2016:</strong> Amidst a major national wave of municipal plastic bag bans (NYC, MA, CA).</p>
+                </div>
+                <!-- Audience -->
+                <div onclick="toggleCard('audience')" class="cursor-pointer border border-slate-200 p-4 rounded-lg hover:border-indigo-500 transition">
+                    <h3 class="font-bold text-indigo-900 flex justify-between items-center">
+                        Audience <span class="text-xs font-normal text-indigo-500">Tap to reveal</span>
+                    </h3>
+                    <p id="audience" class="text-sm text-slate-600 mt-2 hidden"><strong>Progressive Readers:</strong> Eco-conscious citizens and policy-makers who assume bag bans are an easy win.</p>
+                </div>
+                <!-- Purpose -->
+                <div onclick="toggleCard('purpose')" class="cursor-pointer border border-slate-200 p-4 rounded-lg hover:border-indigo-500 transition">
+                    <h3 class="font-bold text-indigo-900 flex justify-between items-center">
+                        Purpose <span class="text-xs font-normal text-indigo-500">Tap to reveal</span>
+                    </h3>
+                    <p id="purpose" class="text-sm text-slate-600 mt-2 hidden"><strong>Complicate Assumptions:</strong> Expose the hidden carbon and environmental trade-offs of paper and cotton bags.</p>
+                </div>
+                <!-- Subject -->
+                <div onclick="toggleCard('subject')" class="cursor-pointer border border-slate-200 p-4 rounded-lg hover:border-indigo-500 transition">
+                    <h3 class="font-bold text-indigo-900 flex justify-between items-center">
+                        Subject <span class="text-xs font-normal text-indigo-500">Tap to reveal</span>
+                    </h3>
+                    <p id="subject" class="text-sm text-slate-600 mt-2 hidden"><strong>Unintended Consequences:</strong> The ecological footprint of alternatives to single-use plastic bags.</p>
+                </div>
+                <!-- Tone -->
+                <div onclick="toggleCard('tone')" class="cursor-pointer border border-slate-200 p-4 rounded-lg hover:border-indigo-500 transition">
+                    <h3 class="font-bold text-indigo-900 flex justify-between items-center">
+                        Tone <span class="text-xs font-normal text-indigo-500">Tap to reveal</span>
+                    </h3>
+                    <p id="tone" class="text-sm text-slate-600 mt-2 hidden"><strong>Pragmatic & Nuanced:</strong> Objective, informative, and mildly provocative.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEW Step 2: Rhetorical Strategy Tap-to-Reveal Flashcards -->
+        <section class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 space-y-4">
+            <div>
+                <span class="text-xs font-bold uppercase text-indigo-600 tracking-wider">Step 2 • Strategy Spotter</span>
+                <h2 class="text-xl font-bold text-slate-900">Identify Adler's Rhetorical Choices</h2>
+                <p class="text-sm text-slate-600">Read each excerpt below. Before tapping, jot down in your notebook: <em>What specific move is Adler making here, and why?</em> Then tap to check your analytical thinking.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <!-- Quote 1 -->
+                <div onclick="toggleCard('strat1')" class="cursor-pointer border border-slate-200 p-4 rounded-lg hover:border-indigo-500 transition bg-slate-50 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-xs font-bold text-indigo-700 bg-indigo-100 px-2 py-0.5 rounded">Excerpt 1</span>
+                            <span class="text-xs text-indigo-500">Tap to reveal strategy</span>
+                        </div>
+                        <blockquote class="text-xs italic text-slate-700 border-l-2 border-indigo-400 pl-2">
+                            "The adverse impacts of plastic bags are undeniable... plastic grocery bags were the seventh most common item collected during the Ocean Conservancy’s cleanup... NYC collects 1,700 tons of single-use carry-out bags every week..."
+                        </blockquote>
+                    </div>
+                    <div id="strat1" class="hidden text-xs text-slate-700 mt-3 pt-3 border-t border-slate-200 bg-white p-3 rounded">
+                        <p class="font-bold text-indigo-900">Rhetorical Choice: Strategic Concession & Hard Data</p>
+                        <p class="mt-1">Adler acknowledges the real harms of plastic bags using civic statistics. This builds credibility (ethos) with eco-conscious readers by showing he is not a plastic apologist before he introduces his counter-argument.</p>
+                    </div>
+                </div>
+
+                <!-- Quote 2 -->
+                <div onclick="toggleCard('strat2')" class="cursor-pointer border border-slate-200 p-4 rounded-lg hover:border-indigo-500 transition bg-slate-50 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-xs font-bold text-indigo-700 bg-indigo-100 px-2 py-0.5 rounded">Excerpt 2</span>
+                            <span class="text-xs text-indigo-500">Tap to reveal strategy</span>
+                        </div>
+                        <blockquote class="text-xs italic text-slate-700 border-l-2 border-indigo-400 pl-2">
+                            "‘People look at [paper] and say it’s degradable, therefore it’s much better... but it’s not in terms of climate change impact,’ says David Tyler, a professor of chemistry at the University of Oregon..."
+                        </blockquote>
+                    </div>
+                    <div id="strat2" class="hidden text-xs text-slate-700 mt-3 pt-3 border-t border-slate-200 bg-white p-3 rounded">
+                        <p class="font-bold text-indigo-900">Rhetorical Choice: Expert Scientific Testimony</p>
+                        <p class="mt-1">Adler incorporates a chemistry professor to dismantle a common misconception. Using expert authority reframes a moral debate into an objective scientific question about carbon mass and life-cycle energy.</p>
+                    </div>
+                </div>
+
+                <!-- Quote 3 -->
+                <div onclick="toggleCard('strat3')" class="cursor-pointer border border-slate-200 p-4 rounded-lg hover:border-indigo-500 transition bg-slate-50 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-xs font-bold text-indigo-700 bg-indigo-100 px-2 py-0.5 rounded">Excerpt 3</span>
+                            <span class="text-xs text-indigo-500">Tap to reveal strategy</span>
+                        </div>
+                        <blockquote class="text-xs italic text-slate-700 border-l-2 border-indigo-400 pl-2">
+                            "Only 2.4 percent of the world’s cropland is planted with cotton, yet it accounts for 24 percent of the global market for insecticides... A pound of cotton requires more than 5,000 gallons of water..."
+                        </blockquote>
+                    </div>
+                    <div id="strat3" class="hidden text-xs text-slate-700 mt-3 pt-3 border-t border-slate-200 bg-white p-3 rounded">
+                        <p class="font-bold text-indigo-900">Rhetorical Choice: Comparative Resource Analysis</p>
+                        <p class="mt-1">Adler uses shocking agricultural statistics regarding cotton tote production to challenge the assumption that reusable alternatives are inherently eco-friendly, forcing readers to examine trade-offs.</p>
+                    </div>
+                </div>
+
+                <!-- Quote 4 -->
+                <div onclick="toggleCard('strat4')" class="cursor-pointer border border-slate-200 p-4 rounded-lg hover:border-indigo-500 transition bg-slate-50 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-xs font-bold text-indigo-700 bg-indigo-100 px-2 py-0.5 rounded">Excerpt 4</span>
+                            <span class="text-xs text-indigo-500">Tap to reveal strategy</span>
+                        </div>
+                        <blockquote class="text-xs italic text-slate-700 border-l-2 border-indigo-400 pl-2">
+                            "‘Eat one less meat dish a week—that’s what will have a real impact on the environment,’ says Tyler. ‘It’s what we put in the bag at the grocery store that really matters.’"
+                        </blockquote>
+                    </div>
+                    <div id="strat4" class="hidden text-xs text-slate-700 mt-3 pt-3 border-t border-slate-200 bg-white p-3 rounded">
+                        <p class="font-bold text-indigo-900">Rhetorical Choice: Shift in Perspective (Reframing the Problem)</p>
+                        <p class="mt-1">Adler concludes by broadening the scope from bag policy to broader dietary overconsumption, leaving the reader with a practical, high-impact action step rather than a superficial policy fix.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 3: The Introduction Formula -->
+        <section class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 space-y-4">
+            <div>
+                <span class="text-xs font-bold uppercase text-indigo-600 tracking-wider">Step 3 • The Formula</span>
+                <h2 class="text-xl font-bold text-slate-900">Introduction Architecture</h2>
+            </div>
+
+            <div class="bg-slate-100 p-4 rounded-lg space-y-3 font-mono text-sm border-l-4 border-indigo-600">
+                <p><strong>Sentence 1 (Context):</strong> In [Year/Publication], [Author] addresses [Occasion/Audience] regarding [Subject].</p>
+                <p><strong>Sentence 2 (Purpose):</strong> By [Action/Reframing], [Author] seeks to [Core Purpose].</p>
+                <p><strong>Sentences 3–4 (Thesis):</strong> [Author] accomplishes this by [Specific Choice A] and [Specific Choice B], ultimately moving the audience to [Target Goal].</p>
+            </div>
+
+            <div class="bg-rose-50 border border-rose-200 p-4 rounded-lg">
+                <h4 class="font-bold text-rose-900 text-sm">🚨 AP Thesis Guardrail</h4>
+                <p class="text-xs text-rose-800 mt-1">
+                    Do <strong>NOT</strong> list generic rhetorical devices (e.g., <em>"Adler uses ethos, logos, and pathos"</em>). Instead, use the choices you unlocked in Step 2 (e.g., <em>"incorporating scientific expert testimony"</em> or <em>"analyzing comparative resource-intensity data"</em>).
+                </p>
+            </div>
+        </section>
+
+        <!-- Step 4: Write in Notebook & Self-Check -->
+        <section class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 space-y-4">
+            <div>
+                <span class="text-xs font-bold uppercase text-indigo-600 tracking-wider">Step 4 • Draft & Self-Check</span>
+                <h2 class="text-xl font-bold text-slate-900">Write Your Paragraph (In Notebook)</h2>
+                <p class="text-sm text-slate-600">In your notebook, write out your full 3–4 sentence introduction paragraph by hand. Once finished, use the checklist below to evaluate your draft.</p>
+            </div>
+
+            <!-- Self-Check Checklist -->
+            <div class="bg-indigo-50 p-5 rounded-lg border border-indigo-100 space-y-3">
+                <h4 class="font-bold text-indigo-900 text-sm">Handwritten Draft Self-Check</h4>
+                <p class="text-xs text-indigo-700">Check off each item as you confirm it in your handwritten notebook entry:</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs pt-1">
+                    <label class="flex items-center gap-2 bg-white p-3 rounded border border-slate-200 cursor-pointer">
+                        <input type="checkbox" class="rounded text-indigo-600"> Includes Author, Date, and Audience context
+                    </label>
+                    <label class="flex items-center gap-2 bg-white p-3 rounded border border-slate-200 cursor-pointer">
+                        <input type="checkbox" class="rounded text-indigo-600"> Clearly states Adler's core argument/purpose
+                    </label>
+                    <label class="flex items-center gap-2 bg-white p-3 rounded border border-slate-200 cursor-pointer">
+                        <input type="checkbox" class="rounded text-indigo-600"> Names 2+ specific rhetorical choices from Step 2
+                    </label>
+                    <label class="flex items-center gap-2 bg-white p-3 rounded border border-slate-200 cursor-pointer">
+                        <input type="checkbox" class="rounded text-indigo-600"> Completely avoids "ethos / pathos / logos"
+                    </label>
+                </div>
+            </div>
+
+            <!-- Peer Review Instructions -->
+            <div class="border-t border-slate-200 pt-4 mt-4">
+                <h3 class="font-bold text-slate-800 text-sm">Peer Review Step</h3>
+                <p class="text-xs text-slate-600 mt-1">
+                    Swap physical notebooks with your elbow buddy. Read their handwritten introduction paragraph and check if their thesis statement clearly names <strong>specific rhetorical choices</strong> instead of generic terms.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Vanilla JS logic -->
+    <script>
+        function toggleCard(id) {
+            const el = document.getElementById(id);
+            el.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
